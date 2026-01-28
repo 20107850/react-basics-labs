@@ -40,4 +40,8 @@ div {
 .taskdescription {
   font-style: italic;
 }
+.priority {
+  font-weight: bold;
+  margin-top: 1rem;
+}
 
