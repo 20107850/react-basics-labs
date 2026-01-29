@@ -95,4 +95,24 @@ form {
   width: 50%;
   margin: auto;
 }
+.priority {
+  color: white;
+  font-weight: bold;
+  padding: 6px;
+  border-radius: 6px;
+  text-align: center;
+  margin: 10px 0;
+}
+
+.priority.low {
+  background-color: green;
+}
+
+.priority.medium {
+  background-color: goldenrod;
+}
+
+.priority.high {
+  background-color: red;
+}
 

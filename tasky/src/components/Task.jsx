@@ -1,12 +1,22 @@
 import React from 'react';
 
 const Task = (props) => {
+  let priorityClass = "priority";
+
+  if (props.priority === "Low") {
+    priorityClass += " low";
+  } else if (props.priority === "Medium") {
+    priorityClass += " medium";
+  } else if (props.priority === "High") {
+    priorityClass += " high";
+  }
     
     return (
         <div className="card" style={{backgroundColor: props.done ? 'lightgrey' : '#5bb4c4'}}>
             <p className="title">{props.title}</p>
             <p>Due: {props.deadline}</p>
             <p className="taskdescription">{props.description}</p>
+            <p className={priorityClass}>{props.priority}</p>
             <p>{props.children}</p>
              <p className="priority">{props.priority}</p>
              <button onClick={props.markDone} className='doneButton'>Done</button>
